@@ -19,7 +19,7 @@
  
 		<input name="mult1" type="text" class="textBox" readonly value=<c:out value="${mult1}"/>>*
 		<input name="mult2" type="text" class="textBox" readonly value=<c:out value="${mult2}"/>>=
-		<input name=product" type="text" class="textBox" readonly value=<c:out value="${product}"/>>
+		<input name=mult" type="text" class="textBox" readonly value=<c:out value="${mult}"/>>
 		<br>
  		</form>
  		 <a href="calculator.do" class="button">Try Again</a>
