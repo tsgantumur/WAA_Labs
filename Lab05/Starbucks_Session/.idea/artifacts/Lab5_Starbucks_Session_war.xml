@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Lab5_Starbucks_Session:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>Lab5_Starbucks_Session</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="Lab5_Starbucks_Session-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="Lab5_Starbucks_Session:war exploded" />
+    </root>
+  </artifact>
+</component>
