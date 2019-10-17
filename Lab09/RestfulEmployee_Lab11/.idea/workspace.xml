@@ -17,6 +17,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -38,7 +39,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Lesson09/webstore_rest" />
+    <property name="last_opened_file_path" value="D:/MUM/Courses/WAA/Lab Solutions/Lab09/RestFulEmployeeSol" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -136,7 +137,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1570926402987</updated>
-      <workItem from="1570926405649" duration="7632000" />
+      <workItem from="1570926405649" duration="7859000" />
+      <workItem from="1571090214490" duration="24000" />
+      <workItem from="1571273107859" duration="2871000" />
     </task>
     <servers />
   </component>
