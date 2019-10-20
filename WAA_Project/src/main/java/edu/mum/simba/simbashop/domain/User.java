@@ -1,69 +1,54 @@
 package edu.mum.simba.simbashop.domain;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+import javax.persistence.*;
+import java.util.List;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@Entity
 public class User {
 
+    @Id
+    @GeneratedValue
+    private Long id;
     private String firstName;
     private String lastName;
     private String username;
     private String password;
-    private Address address;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Address> billingAddress;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Address> shippingAddress;
+
+    @OneToOne
     private Phone phone;
+
+    @Enumerated(EnumType.STRING)
     private Role role;
 
-    public String getFirstName() {
-        return firstName;
-    }
+    private String permission;
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+    @OneToOne(cascade = CascadeType.ALL)
+    private ShoppingCart shoppingCart;
 
-    public String getLastName() {
-        return lastName;
-    }
+    private Double coupon;
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Order> orderList;
 
-    public String getUsername() {
-        return username;
-    }
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<BillingCart> billingCartList;
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<User> followedSellerList;
 
-    public String getPassword() {
-        return password;
-    }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
 
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
-    }
-
-    public Phone getPhone() {
-        return phone;
-    }
-
-    public void setPhone(Phone phone) {
-        this.phone = phone;
-    }
-
-    public Role getRole() {
-        return role;
-    }
-
-    public void setRole(Role role) {
-        this.role = role;
-    }
 }

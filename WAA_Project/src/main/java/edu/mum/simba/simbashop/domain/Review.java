@@ -7,22 +7,21 @@ import lombok.Setter;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Getter @Setter @NoArgsConstructor
 @Entity
-public class Address {
+public class Review {
 
     @Id
     @GeneratedValue
     private Long id;
 
-    private String street;
+    private String comment;
 
-    private String state;
+    private Integer rate;
 
-    private String city;
-
-    private String zipCode;
-
+    @OneToOne
+    private User user;
 
 }

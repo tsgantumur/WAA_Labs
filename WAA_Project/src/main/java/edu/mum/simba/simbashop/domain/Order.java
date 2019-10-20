@@ -5,23 +5,23 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.List;
-
+import java.time.LocalDate;
 
 @Getter @Setter @NoArgsConstructor
 @Entity
-public class ShoppingCart {
+public class Order {
 
     @Id
     @GeneratedValue
     private Long id;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    private List<Product> productList;
+    private Double amount;
 
-    private double totalPrice;
+    private LocalDate date;
 
-    private int productNumber;
+    private String orderNumber;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    private ShoppingCart shoppingCart;
 
 }

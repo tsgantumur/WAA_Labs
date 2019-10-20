@@ -7,22 +7,22 @@ import lombok.Setter;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.time.LocalDate;
 
-@Getter @Setter @NoArgsConstructor
+@Getter
+@Setter @NoArgsConstructor
 @Entity
-public class Address {
+public class BillingCart {
 
     @Id
     @GeneratedValue
     private Long id;
 
-    private String street;
+    private String cartNumber;
 
-    private String state;
+    private LocalDate expDate;
 
-    private String city;
+    private String cartHolderName;
 
-    private String zipCode;
-
-
+    private Integer securityDigits;
 }

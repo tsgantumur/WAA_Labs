@@ -1,32 +1,26 @@
 package edu.mum.simba.simbashop.domain;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Getter @Setter @NoArgsConstructor
+@Entity
 public class Phone {
 
-    private String areacode;
+    @Id
+    @GeneratedValue
+
+    private Long id;
+
+    private String areaCode;
+
     private String prefix;
+
     private String number;
 
-    public String getAreacode() {
-        return areacode;
-    }
-
-    public void setAreacode(String areacode) {
-        this.areacode = areacode;
-    }
-
-    public String getPrefix() {
-        return prefix;
-    }
-
-    public void setPrefix(String prefix) {
-        this.prefix = prefix;
-    }
-
-    public String getNumber() {
-        return number;
-    }
-
-    public void setNumber(String number) {
-        this.number = number;
-    }
 }
